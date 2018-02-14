@@ -1,4 +1,7 @@
 .terraform
 *.tfstate
 *.tfstate.backup
+*.swp
+.idea
+
 
