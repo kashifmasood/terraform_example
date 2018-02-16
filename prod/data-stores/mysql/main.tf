@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "km-terraform-state"
-    key = "stage/data-sources/mysql/terraform.tfstate"
+    key = "prod/data-sources/mysql/terraform.tfstate"
     region = "us-east-1"
     encrypt = true
   }
@@ -15,7 +15,7 @@ resource "aws_db_instance" "example" {
   engine = "mysql"
   allocated_storage = 10
   instance_class = "db.t2.micro"
-  name = "km_example_database_stage"
+  name = "km_example_database_prod"
   username = "admin"
   password = "${var.db_password}"
 }
